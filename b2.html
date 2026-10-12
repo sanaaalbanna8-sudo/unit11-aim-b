@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ب2 مكونات الشبكة | الوحدة 11</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="b2" data-prev="b1.html" data-next="b3.html">
+<div class="app">
+  <aside class="side" id="side"></aside>
+  <div class="main">
+    <header class="bar">
+      <button class="menu-btn" id="btnMenu" type="button">الأقسام</button>
+      <a href="index.html" style="text-decoration:none;color:inherit;font-weight:700">الوحدة 11 · ب</a>
+      <nav class="quick">
+        <a href="index.html">البداية</a>
+        <a href="b1.html">ب1</a>
+        <a href="b2.html" aria-current="page">ب2</a>
+        <a href="b3.html">ب3</a>
+        <a href="lab.html">عملي</a>
+        <a href="glossary.html">معجم</a>
+      </nav>
+    </header>
+    <div class="deck">
+
+      <section class="slide hero" id="b2-open">
+        <p class="kicker">ب2 · Network components</p>
+        <h1>المكوّن الصغير يغيّر من يرى البيانات</h1>
+        <p class="lead">الشبكة تُبنى من أجهزة طرفية، وأجهزة تمرّر الحركة، ووسط يحملها، ونظام يشغّلها، وأدوات تراقبها، وتطبيقات تحفظ العمل. كل قطعة لها وظيفة نافعة وطريقة تفشل بها.</p>
+      </section>
+
+      <section class="slide" id="endpoints">
+        <p class="kicker">ب2 · أجهزة المستخدم النهائي</p>
+        <h2>الطرف الذي يجلس عليه الإنسان هو باب الشبكة</h2>
+<figure class="figure"><img src="images/lost-phone.jpg" alt="الهاتف الشخصي إذا نُسي في الحافلة خرج معه بريد العمل إن كان محفوظًا عليه."><figcaption>الهاتف الشخصي إذا نُسي في الحافلة خرج معه بريد العمل إن كان محفوظًا عليه.</figcaption></figure>
+        <div class="grid-3">
+          <article class="card"><h3>مكتبي</h3><p>ثابت على المكتب، سهل ربطه بكيبل، وأسهل مراقبته لأنه لا يغادر الغرفة. ما يُحفظ على قرصه يبقى في المؤسسة إن ضُبطت الصلاحيات.</p></article>
+          <article class="card"><h3>محمول</h3><p>ينتقل بين البيت والكلية. إن حُفظت عليه ملفات الطلاب ثم ضاع في المواصلات، خرجت البيانات مع الجهاز. التشفير وقفل الشاشة يقللان الأثر، ولا يلغيان الحاجة إلى حساب مركزي.</p></article>
+          <article class="card"><h3>هاتف وجهاز لوحي</h3><p>مع صاحبها دائمًا، وتطبيقاتها كثيرة. بريد العمل بجانب تطبيقات لا علاقة للكلية بها. فقدان الجهاز أو تطبيق يطلب أذونات واسعة كلاهما أثر على المؤسسة والشخص معًا.</p></article>
+        </div>
+        <article class="story">
+          <span class="tag">مشهد</span>
+          <p>معلمة أنهت كشوف الغياب على الحاسوب المحمول وتركته في السيارة. الجهاز بلا قفل. الأثر ليس ثمن الجهاز، بل أسماء الطلاب وأرقام أولياء الأمور. للشخص: خصوصيته وخصوصيتهم. للمؤسسة: ثقة وإجراء.</p>
+        </article>
+      </section>
+
+      <section class="slide" id="connectivity">
+        <p class="kicker">ب2 · أجهزة الاتصال</p>
+        <h2>كل جهاز يمرر الحركة يقرر شيئًا مختلفًا</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>الجهاز</th><th>وظيفته</th><th>أثره الأمني والتشغيلي</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><span class="t" data-en="Switch" data-say="Switch">مبدّل</span></td>
+                <td>داخل المحلية يوصل الأجهزة ويبعث الإطار إلى المنفذ المقصود بحسب عنوان MAC.</td>
+                <td>يضيّق من يرى الحركة مقارنة بالموزّع القديم الذي كان يبث للكل. إن سقط، سقط من هو مربوط به. منافذه المفتوحة في الممر دعوة لجهاز غريب.</td>
+              </tr>
+              <tr>
+                <td><span class="t" data-en="Router" data-say="Router">موجّه</span></td>
+                <td>تقاطع طرق. يرسل الحزمة إلى شبكة أخرى بحسب عنوان IP.</td>
+                <td>هو بوابة الإنترنت والحد بين الأقسام. إعداده الضعيف يفتح الداخل، وإعداده الجيد هو أول تصفية.</td>
+              </tr>
+              <tr>
+                <td><span class="t" data-en="Access point" data-say="Access point">نقطة وصول</span></td>
+                <td>جسر بين السلك والموجة.</td>
+                <td>توسّع الشبكة إلى الهواء. مكانها وكلمة مرورها وقصل شبكة الضيوف تحدد من يدخل المبنى رقميًا.</td>
+              </tr>
+              <tr>
+                <td><span class="t" data-en="USB hub" data-say="U S B hub">موزع USB</span></td>
+                <td>يضاعف منافذ توصيل الطابعة أو القرص الخارجي بجهاز واحد.</td>
+                <td>منفذ إضافي هو طريق إضافي لوسط تخزين. في المختبر يُقفل ما لا يُحتاج.</td>
+              </tr>
+              <tr>
+                <td><span class="t" data-en="Modem" data-say="Modem">مودم</span></td>
+                <td>يصل المحلية بخط المزود. <span class="t" data-en="ADSL" data-say="A D S L">ADSL</span> عبر الهاتف، ومودم الكبل عبر خط التلفاز حيث يتوفر.</td>
+                <td>هو حافة المؤسسة نحو الخارج. خلفه تبدأ مسؤولية التصنيف: ماذا يُسمح له بالعبور.</td>
+              </tr>
+              <tr>
+                <td><span class="t" data-en="Multifunction device" data-say="Multifunction device">متعدد الوظائف</span></td>
+                <td>صندوق المزود المنزلي: مودم وموجّه ونقطة وصول ومبدّل.</td>
+                <td>مريح للبيت. في مؤسسة كبيرة يختلط القرار إن لم تُفهم وظائفه. كلمة مرور الإدارة المطبوعة على الملصق خطأ شائع.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="slide" id="copper">
+        <p class="kicker">ب2 · النحاس والألياف</p>
+        <h2>الكيبل يحمي الإشارة أو يسرّبها بحسب نوعه</h2>
+        <p class="lead">الأكثر شيوعًا في المحلية هو الثنائي المجدول غير المعزول: أربعة أزواج نحاسية ملفوفة لتقليل التداخل. أدنى فئة مناسبة للشبكات الحاسوبية في الكتاب هي الفئة 5.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>الفئة</th><th>السرعة العملية التي تُدرَّس</th><th>طول المقطع</th></tr></thead>
+            <tbody>
+              <tr><td>Cat5</td><td>100 ميغابت/ثانية</td><td>100 متر</td></tr>
+              <tr><td>Cat5e</td><td>1 غيغابت/ثانية</td><td>100 متر</td></tr>
+              <tr><td>Cat6</td><td>10 غيغابت حتى 55 مترًا، و1 غيغابت حتى 100 متر</td><td>55 م للسرعة العليا</td></tr>
+              <tr><td>Cat6a / Cat7</td><td>10 غيغابت/ثانية</td><td>100 متر</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid-2">
+          <article class="card">
+            <h3><span class="t" data-en="STP" data-say="Shielded twisted pair">مجدول معزول</span></h3>
+            <p>في المصنع والمستودع حيث التداخل الكهربائي عالٍ، تُلف الأزواج بعازل معدني. الاختيار هنا تشغيلي أولًا: حتى لا تفسد الإشارة، لا حتى «يصبح الكيبل سريًا».</p>
+          </article>
+          <article class="impact good">
+            <h3><span class="t" data-en="Fibre" data-say="Fibre optic">ليف ضوئي</span></h3>
+            <p>ينقل بالضوء لا بالكهرباء، فيقطع مسافة أطول وتستخدمه شركات الاتصال بديلًا عن نحاس الهاتف. لا يتسرب منه إشارة كما يتسرب من النحاس، والعبث به يُظهر تسرب ضوء. لذلك هو أصعب اعتراضًا. تكلفته أعلى وتركيبه أدق. أحدث فئات النحاس تقترب في السرعة على المسافة القصيرة، والألياف تبقى أنسب للبعد وللأمان المادي للوسط.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="slide" id="wireless-media">
+        <p class="kicker">ب2 · وسائط بلا كيبل</p>
+        <h2>ما لا يُمد في الجدار يصل إلى من يقف خارجه</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Wi-Fi</h3>
+            <p>بلا تكلفة تمديد، والحركة حرة. البث يصل خارج الغرفة، والتنصت أسهل من كيبل مغلق، وتظهر مناطق ميتة خلف الجدران. المقوّي أو الشبكة المتشابكة يعالج التغطية. التشفير والإعداد يعالجان السرية.</p>
+          </article>
+          <article class="card">
+            <h3>بلوتوث</h3>
+            <p>قصير المدى وطاقته قليلة: سماعة ولوحة مفاتيح. ليس بديلًا عن واي فاي المبنى.</p>
+          </article>
+          <article class="card">
+            <h3><span class="t" data-en="Infrared" data-say="Infrared">أشعة تحت حمراء</span></h3>
+            <p>موجة أطول قليلًا من الضوء الأحمر وأقصر من الراديو. تحتاج خط نظر بلا حاجز. جهاز التحكم في التلفاز مثالها. من ليس أمام الجهاز لا يشارك الجلسة بسهولة.</p>
+          </article>
+        </div>
+        <article class="def">
+          <h3><span class="t" data-en="Li-Fi" data-say="Li-Fi">لاي فاي</span></h3>
+          <p>فكرة قريبة من الواي فاي لكنها تستخدم الضوء لا الراديو، بطموح عرض نطاق أعلى. تصلح حيث يُمنع الراديو بسبب التداخل، مثل بعض مواضع الطائرات. التقنية ما زالت تتطور. أمنيًا: الضوء لا يعبر الجدار كما تعبره الموجة، فمن خارج الغرفة لا يلتقط البث بسهولة، والانقطاع يحصل بمجرد حجب الضوء.</p>
+        </article>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th></th><th>نحاس مجدول</th><th>ألياف</th><th>لاسلكي</th></tr></thead>
+            <tbody>
+              <tr><td>المسافة</td><td>المحلية، نحو 100 م</td><td>طويلة</td><td>قصيرة وتتوقف عند العوائق</td></tr>
+              <tr><td>السرعة</td><td>عالية بحسب الفئة</td><td>عالية</td><td>متوسطة إلى عالية بحسب الإصدار والازدحام</td></tr>
+              <tr><td>التركيب</td><td>يحتاج تمديدًا</td><td>أدقق وأغلى</td><td>أسهل</td></tr>
+              <tr><td>الاعتراض</td><td>ممكن على الوسط النحاسي</td><td>صعب</td><td>أسهل لأنه مبثوث</td></tr>
+              <tr><td>التكلفة</td><td>متوسطة</td><td>أعلى</td><td>أقل في التمديد</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="slide" id="external-storage">
+        <p class="kicker">ب2 · وسائط خارجية</p>
+        <h2>ما يُنقل باليد يخرج من سياسة الشبكة</h2>
+<figure class="figure"><img src="images/usb-lot.jpg" alt="فلاشة في الموقف. الفضول أقصر من السؤال عن صاحبها."><figcaption>فلاشة في الموقف. الفضول أقصر من السؤال عن صاحبها.</figcaption></figure>
+        <div class="grid-2">
+          <article class="story">
+            <span class="tag">فلاشة في الموقف</span>
+            <h3>الفضول أقصر طريق إلى الجهاز</h3>
+            <p>ذاكرة <span class="t" data-en="USB" data-say="U S B flash drive">USB</span> صغيرة، وسعتها قد تبلغ عشرات الغيغابايت، وتفيد لنقل ملف أكبر من البريد أو لنسخ بيتي حين لا يوجد نت. وهي تضيع، وتنقل برنامجًا ضارًا من جهاز إلى جهاز. لذلك تمنعها مؤسسات كثيرة.</p>
+            <p>المشهد الواقعي المتكرر في التوعية: فلاشة متروكة في الموقف، وموظف يوصلها «ليعرف صاحبها». الجهاز الذي فُتح عليه حساب العمل أصبح نقطة دخول. السحابة أنسب حين يتوفر الاتصال. وإن لزم النقل، يُفحص الوسيط على جهاز معزول لا على جهاز المدير.</p>
+          </article>
+          <article class="card">
+            <h3><span class="t" data-en="Optical media" data-say="Optical media">وسائط ضوئية</span></h3>
+            <p>الأقراص المدمجة وأقراص الفيديو نُشرت عليها البرمجيات سنوات. اليوم يُنزَّل البرنامج عبر الشبكة. القرص ما زال يظهر في أرشيف قديم أو جهاز بلا نت. من وجده يستطيع نسخه. الأثر أقل من السابق لأن التوزيع انتقل إلى الإنترنت، وأمن التنزيل صار هو السؤال: من الموقع؟ وهل التحديث موقع؟</p>
+            <article class="impact good" style="margin-top:8px">
+              <h3>توازن</h3>
+              <p>المنع الكامل للفلاشة يحمّي ويُبطئ عملًا مشروعًا في موقع بلا نت. السياسة الجيدة تقول: متى تُسمح، وعلى أي جهاز، وبعد أي فحص.</p>
+            </article>
+          </article>
+        </div>
+      </section>
+
+      <section class="slide" id="operating-systems">
+        <p class="kicker">ب2 · أنظمة التشغيل</p>
+        <h2>النظام يحدد إن كان الجهاز لشخص واحد أم لشبكة كاملة</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>هواتف وألواح</h3>
+            <p><span class="t" data-en="Android" data-say="Android">أندرويد</span> و<span class="t" data-en="iOS" data-say="iOS">آي أو إس</span> مصممان لمستخدم واحد على الجهاز. التحديث أحيانًا بيد الشركة المصنعة للجهاز لا بيد الكلية. جهاز قديم بلا تحديثات يبقى على شبكة العمل بنقاط ضعف معروفة.</p>
+          </article>
+          <article class="card">
+            <h3>مكتبي ومحمول</h3>
+            <p><span class="t" data-en="Windows" data-say="Windows">ويندوز</span> و<span class="t" data-en="macOS" data-say="mac O S">ماك</span> لشاشات العمل الكاملة. حسابات عدة على الجهاز، وشخص واحد يعمل في اللحظة نفسها. نسخة المنزل تلائم نظيرًا إلى نظير. نسخة المؤسسة تعمل في النظير وفي العميل والخادم وتقبل سياسات مركزية.</p>
+          </article>
+          <article class="card">
+            <h3>خادم</h3>
+            <p>ويندوز سيرفر و<span class="t" data-en="Linux" data-say="Linux">لينكس</span> يخدمان مستخدمين كثرًا في الوقت نفسه عن بُعد. أدواتهما لمدير الشبكة لا لسطح مكتب الموظف. من يملك حساب المدير على نظام الخادم يملك مفاتيح النطاق.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="slide" id="tools">
+        <p class="kicker">ب2 · أدوات الإدارة</p>
+        <h2>الأداة التي تشخّص العطل هي نفسها التي تكشف أثر الأمان</h2>
+        <div class="grid-2">
+          <article class="card">
+            <h3><span class="t" data-en="Performance monitor" data-say="Performance monitor">مراقبة الأداء</span></h3>
+            <p>تظهر الوصلة البطيئة قبل أن يشتكي الصف كله. بطء غير مفهوم قد يكون عطلًا أو جهازًا يبث حركة لا تخص الدرس.</p>
+          </article>
+          <article class="card">
+            <h3><span class="t" data-en="Event viewer" data-say="Event viewer">عارض الأحداث والسجلات</span></h3>
+            <p>جدار الحماية والمبدّلات والخوادم تكتب: رابط صعد، رابط سقط، محاولة رُفضت. المدير يقرأ السجل ليفرق بين عطل ومحاولة دخول. السجل الذي لا يسجل المرفوض فارغ حين نحتاجه.</p>
+          </article>
+          <article class="card">
+            <h3><span class="t" data-en="Vulnerability scanner" data-say="Vulnerability scanner">فاحص ثغرات</span></h3>
+            <p>يمر على أجهزة المؤسسة التي نمتلكها ويشير إلى نظام بلا آخر التحديثات. وظيفته للإدارة وبإذن. تشغيله على شبكة الكلية أو على الإنترنت بلا تفويض تعدٍّ، لا نشاطًا صفيًا.</p>
+          </article>
+          <article class="card">
+            <h3><span class="t" data-en="Packet sniffer" data-say="Packet sniffer">أداة التقاط الحزم</span></h3>
+            <p>تعرض محتوى الحزمة. المدير يرى لماذا يتعثر تطبيق. من يستخدمها في غير موضعها قد يلتقط ما لم يُشفَّر، مثل جلسة موقع قديم. الحماية العملية: تشفير النقل حتى تفقد الأداة معنى المحتوى. العرض في المختبر اختياري ومقيّد، وتفاصيله في صفحة العملي.</p>
+          </article>
+        </div>
+        <article class="lab">
+          <span class="tag">ping كما في الكتاب</span>
+          <p><span class="t" data-en="ping" data-say="ping">ping</span> يسأل: هل يصل هذا العنوان ويرد؟ مفيد لمعرفة أن السلك أو الاسم يعمل. بعض الأجهزة لا ترد لأن الرد يخبر الغريب أن الجهاز حيّ. إغلاق الرد يقلل هذه الإشارة ولا يخفي الجهاز إن كانت عليه خدمة منشورة. جرّبوه على بوابة المختبر وموقع عام، وتوقفوا عند أول جهاز لا يرد لتفسير السبب.</p>
+        </article>
+      </section>
+
+      <section class="slide" id="applications">
+        <p class="kicker">ب2 · تطبيقات الشبكة</p>
+        <h2>التطبيق هو سبب وجود الشبكة، وهو ما يُستهدف لأن البيانات فيه</h2>
+        <div class="grid-2">
+          <article class="card">
+            <h3>قواعد البيانات</h3>
+            <p>منتجات مثل أوراكل و<span class="t" data-en="Microsoft SQL Server" data-say="Microsoft SQL Server">SQL Server</span> و<span class="t" data-en="MySQL" data-say="My SQL">MySQL</span> تتيح لكثيرين أن يبحثوا ويعدلوا مع الحفاظ على سلامة السجل: لا يكتب اثنان القيمة نفسها في اللحظة نفسها. تخزن أسماء وعناوين وأحيانًا بيانات دفع، فتصبح الهدف.</p>
+            <p>حقن <span class="t" data-en="SQL" data-say="S Q L">SQL</span> يحدث حين يُلصق ما يكتبه الزائر داخل أمر قاعدة البيانات، فيتغير معنى الأمر وقد تُقرأ جداول لم يكن البحث يطلبها. لا نجرب ذلك على أي موقع. الحماية: عدم بناء الأمر بلصق النص، وحصر حساب التطبيق بما يحتاجه فقط، ومراجعة المدخلات.</p>
+          </article>
+          <div>
+            <article class="story">
+              <span class="tag">متجر على الويب</span>
+              <p>مربع البحث عن حذاء يفترض أن يعيد منتجات. إن كان الموقع يثق بالنص كما هو، فقد يصبح الطلب «أعطني جدول الزبائن» بدل «أعطني الأحذية». الأثر: أسماء وعناوين وبيانات دفع. الواقعة المشابهة تكررت على مواقع كثيرة، والدرس واحد: المدخل ليس جزءًا من الأمر.</p>
+            </article>
+            <article class="card">
+              <h3>إدارة المستندات</h3>
+              <p>شركة تأمين أو بنك تحمل عقودًا بالآلاف. النظام يتيح البحث والمشاركة لعدة موظفين. الأثر النافع: لا تضيع النسخة الوحيدة في درج. الأثر الخطر: صلاحية «الجميع يقرأ» تجعل عقد العميل متاحًا لمن لا يعمل على الملف.</p>
+            </article>
+            <article class="card">
+              <h3><span class="t" data-en="Network discovery" data-say="Network discovery">اكتشاف الشبكة</span></h3>
+              <p>يعرض الخدمات والطابعات حتى يجدها المستخدم. مفيد. وإن تُرك مفتوحًا على جهاز الإدارة ظهر الجهاز في قائمة الجميع. يُطفأ الاكتشاف حيث لا نريد إعلان الوجود.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="slide" id="b2-impact">
+        <p class="kicker">ب2 · تحليل</p>
+        <h2>المكوّن لا يُقاس بثمنه بل بما يمر عبره</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>المكوّن</th><th>نفع للشخص أو المؤسسة</th><th>إن فشل أو أُسيء استخدامه</th></tr></thead>
+            <tbody>
+              <tr><td>حاسوب محمول</td><td>عمل خارج المكتب</td><td>بيانات تغادر مع الجهاز</td></tr>
+              <tr><td>مبدّل</td><td>يصل المختبر ويمنع البث الأعمى</td><td>نقطة واحدة تطفئ الصف، ومنفذ زائد يستقبل غريبًا</td></tr>
+              <tr><td>موجّه</td><td>يفصل الشبكات ويصل الإنترنت</td><td>حد خاطئ يخلط الضيوف بالإدارة</td></tr>
+              <tr><td>ألياف بين مبنيين</td><td>سرعة ومسار أصعب اعتراضًا</td><td>قطعها يفصل المبنى الثاني كاملًا</td></tr>
+              <tr><td>واي فاي</td><td>حركة الأجهزة المحمولة</td><td>بث خارج السور إن لم يُضبط</td></tr>
+              <tr><td>فلاشة</td><td>نقل عند انقطاع النت</td><td>ضياع أو برنامج ضار</td></tr>
+              <tr><td>قاعدة بيانات</td><td>عمل مشترك بلا تضارب</td><td>تسرب واسع إن وُثق بالمدخل الأعمى</td></tr>
+              <tr><td>سجل الجدار</td><td>يفسّر الرفض والعطل</td><td>سجل مطفأ يعني تحقيقًا بلا دليل</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    <nav class="trail"><a class="back" href="b1.html">أنواع الشبكات</a><a class="go" href="b3.html">نكمل: خدمات البنية</a></nav>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script src="app.js"></script>
+</body>
+</html>
