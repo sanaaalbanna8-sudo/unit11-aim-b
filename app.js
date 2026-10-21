@@ -15,7 +15,7 @@ const NAV = [
     ["b1.html#pan", "PAN الشخصية"],
     ["b1.html#compare-types", "مقارنة الأنواع"],
     ["b1.html#access-classes", "إنترانت وإكسترانت وسحابة"],
-    ["b1.html#stories-access", "قصص الوصول"],
+    ["b1.html#fail-game", "لعبة: إن تعطل…"],
     ["b1.html#wired-wireless", "الدمج السلكي واللاسلكي"],
     ["b1.html#star", "النجمي والموسّع"],
     ["b1.html#hierarchical", "الهرمي والمتشابك والمخصص"],
@@ -161,9 +161,9 @@ function wireBuilder() {
   if (!builder) return;
   const note = document.getElementById("builderNote");
   const notes = {
-    server: "الخادم يضع الحسابات والملفات في نقطة واحدة يمكن إدارتها. إن بقي على الشبكة نفسها مع أجهزة الطلاب بلا عزل، اقترب أي جهاز مصاب من بيانات الطلاب.",
-    wan: "رابط الإنترنت هو المدخل العام. الحزم تعبر الموجّه، وهنا يُقرر ما يدخل إلى الكلية وما يخرج منها.",
-    wifi: "نقطة الوصول تنشر الإشارة في الهواء. شبكة الضيوف تبقى مفصولة عن خادم السجلات حتى لا يصبح هاتف الزائر طريقًا إلى الداخل."
+    server: "الـ Server يضع الحسابات والملفات في نقطة واحدة يمكن إدارتها. إن بقي على الشبكة نفسها مع أجهزة الطلاب بلا عزل، اقترب أي جهاز مصاب من بيانات الطلاب.",
+    wan: "رابط الإنترنت هو المدخل العام. الحزم تعبر الـ Router، وهنا يُقرر ما يدخل إلى الكلية وما يخرج منها.",
+    wifi: "الـ Access Point تنشر الإشارة في الهواء. شبكة الضيوف تبقى مفصولة عن Server السجلات حتى لا يصبح هاتف الزائر طريقًا إلى الداخل."
   };
   builder.querySelectorAll("button[data-add]").forEach((btn) => {
     btn.addEventListener("click", () => {
@@ -210,7 +210,27 @@ buildNav();
 upgradeTerms();
 wireBuilder();
 wireGlossary();
+wireFailGame();
 bootDeck();
+
+function wireFailGame() {
+  document.querySelectorAll(".fail-game .reveal-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const box = btn.nextElementSibling;
+      if (!box || !box.classList.contains("reveal")) return;
+      const open = box.hasAttribute("hidden");
+      if (open) {
+        box.removeAttribute("hidden");
+        btn.setAttribute("aria-expanded", "true");
+        btn.textContent = "اخفِ الإجابة";
+      } else {
+        box.setAttribute("hidden", "");
+        btn.setAttribute("aria-expanded", "false");
+        btn.textContent = "أظهر ما نناقشه بعد التفكير";
+      }
+    });
+  });
+}
 
 function bootDeck() {
   const slides = [...document.querySelectorAll(".slide")];
