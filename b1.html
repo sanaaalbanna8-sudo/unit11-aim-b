@@ -405,23 +405,69 @@
       <section class="slide" id="logical">
         <p class="kicker">ب1 · مخططات منطقية</p>
         <h2>المخطط المنطقي يشرح كيف تتحدث الأجهزة، لا أين يمر الكيبل</h2>
+        <p class="lead">المخطط المادي = شكل الكيبل. المخطط المنطقي = قواعد الكلام على الشبكة. أشهر عائلتين: سلكي اسمه <bdi>Ethernet</bdi>، ولاسلكي اسمه عائلة <bdi>Wi-Fi</bdi>.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>الرمز</th><th>بالإنجليزية كاملًا</th><th>معناه ببساطة</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><span class="t" data-en="IEEE" data-say="I triple E"></span></td>
+                <td><bdi>Institute of Electrical and Electronics Engineers</bdi></td>
+                <td>منظمة تضع معايير الشبكات والكهرباء. أرقام مثل 802.3 و802.11 صادرة عنها.</td>
+              </tr>
+              <tr>
+                <td><span class="t" data-en="Ethernet" data-say="Ethernet"></span> / <span class="t" data-en="802.3" data-say="802.3"></span></td>
+                <td><bdi>IEEE 802.3</bdi></td>
+                <td>معيار الشبكات <strong>السلكية</strong>. هو ما يشتغل عليه كيبل المختبر والـ <bdi>Switch</bdi>.</td>
+              </tr>
+              <tr>
+                <td><span class="t" data-en="UTP" data-say="U T P"></span></td>
+                <td><bdi>Unshielded Twisted Pair</bdi></td>
+                <td>كيبل نحاس شائع: أزواج أسلاك ملفوفة، بلا غلاف معدني ثقيل. «غير معزول» هنا تعني بلا درع معدني، لا تعني «غير آمن».</td>
+              </tr>
+              <tr>
+                <td><span class="t" data-en="RJ-45" data-say="R J 45"></span></td>
+                <td><bdi>Registered Jack 45</bdi></td>
+                <td>الفيشة البلاستيكية في طرف كيبل الشبكة (أكبر من فيشة الهاتف قليلاً).</td>
+              </tr>
+              <tr>
+                <td><span class="t" data-en="MAC" data-say="Mac address"></span></td>
+                <td><bdi>Media Access Control address</bdi></td>
+                <td>عنوان ثابت مطبوع على بطاقة الشبكة. الـ <bdi>Switch</bdi> داخليًا يقرر المنفذ بحسبه.</td>
+              </tr>
+              <tr>
+                <td><span class="t" data-en="IP" data-say="I P address"></span></td>
+                <td><bdi>Internet Protocol address</bdi></td>
+                <td>عنوان منطقي للجهاز على الشبكة (مثل 192.168.1.10). الـ <bdi>Router</bdi> يقرر الطريق بين الشبكات بحسبه.</td>
+              </tr>
+              <tr>
+                <td><span class="t" data-en="802.11" data-say="802.11"></span> / <span class="t" data-en="Wi-Fi" data-say="Wi-Fi"></span></td>
+                <td><bdi>IEEE 802.11</bdi></td>
+                <td>عائلة معايير الشبكات <strong>اللاسلكية</strong>. <bdi>Wi-Fi</bdi> هو الاسم التجاري الشائع لها.</td>
+              </tr>
+              <tr>
+                <td><bdi>Mbps</bdi> / <bdi>Gbps</bdi></td>
+                <td><bdi>Megabits / Gigabits per second</bdi></td>
+                <td>وحدة السرعة: ميغابت أو غيغابت في الثانية. الكتاب يذكر حتى 400 <bdi>Gbps</bdi> في أنواع كيبل عليا.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <div class="grid-2">
           <article class="card">
-            <h3><span class="t" data-en="Ethernet" data-say="Ethernet">إيثرنت</span> · <span class="t" data-en="IEEE 802.3" data-say="I triple E 802.3">802.3</span></h3>
+            <h3>سلكي: Ethernet</h3>
             <ul>
-              <li>معيار الشبكات السلكية. الكيبل الشائع مزدوج مجدول غير معزول <span class="t" data-en="UTP" data-say="U T P">UTP</span> وموصل <span class="t" data-en="RJ-45" data-say="R J 45">RJ-45</span>.</li>
-              <li>الطول النظري للمقطع نحو 100 متر، ويتأثر بنوع الكيبل والسرعة.</li>
-              <li>السرعات تصل إلى مستويات عالية جدًا بحسب الكيبل، والكتاب يذكر حتى 400 غيغابت في الثانية في الأنواع العليا.</li>
-              <li>الـ <bdi>Switch</bdi> يفحص الإطار ويبعثه إلى المنفذ المقصود. بدقة أدق: قراره داخل المحلية يعتمد عنوان <span class="t" data-en="MAC" data-say="Mac address">MAC</span>، بينما عنوان <span class="t" data-en="IP" data-say="I P address">IP</span> قرار الـ <bdi>Router</bdi> بين الشبكات.</li>
+              <li>الكيبل الشائع <bdi>UTP</bdi> بفيشة <bdi>RJ-45</bdi>. طول المقطع النظري نحو 100 متر، ويتأثر بنوع الكيبل والسرعة.</li>
+              <li>الـ <bdi>Switch</bdi> يقرأ الإطار ويرسله للمنفذ الصحيح داخل الشبكة المحلية باستخدام عنوان <bdi>MAC</bdi>.</li>
+              <li>بين شبكتين مختلفتين يقرر الـ <bdi>Router</bdi> بالمسار حسب عنوان <bdi>IP</bdi>.</li>
             </ul>
           </article>
           <article class="card">
-            <h3>عائلة <span class="t" data-en="IEEE 802.11" data-say="I triple E 802.11">802.11</span></h3>
+            <h3>لاسلكي: عائلة 802.11</h3>
             <ul>
-              <li>معيار اللاسلكي، يشارك الإيثرنت فكرة تنظيم من يتكلم على الوسط.</li>
-              <li>802.11b وصل إلى 11 ميغابت في الثانية وانتشر على نطاق واسع.</li>
-              <li>802.11n وصل إلى 600 ميغابت في الثانية، وتلته إصدارات أسرع صارت اليوم شائعة: واي فاي 5 وواي فاي 6.</li>
-              <li>السرعة على الورقة لا تصل إلى الجهاز إن كان الجدار سميكًا أو القناة مزدحمة.</li>
+              <li><bdi>802.11b</bdi>: وصل إلى 11 <bdi>Mbps</bdi> وانتشر قديمًا على نطاق واسع.</li>
+              <li><bdi>802.11n</bdi>: وصل إلى 600 <bdi>Mbps</bdi>، ثم جاءت أسرع: <bdi>Wi-Fi 5</bdi> و <bdi>Wi-Fi 6</bdi>.</li>
+              <li>السرعة المكتوبة على الورقة لا تصل كاملة إن كان الجدار سميكًا أو القناة مزدحمة.</li>
             </ul>
           </article>
         </div>
