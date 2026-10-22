@@ -22,7 +22,7 @@ const NAV = [
     ["b1.html#logical", "الإيثرنت و 802.11"],
     ["b1.html#read-router-label", "اقرئي ملصق الـ Router"],
     ["b1.html#read-switch-cable", "منافذ Switch والكيبل"],
-    ["b1.html#read-mac", "MAC مقابل IP"],
+    ["b1.html#read-mac", "نشاط ويندوز: MAC و IP"],
     ["b1.html#architecture", "نظير وخادم وعميل رقيق"],
     ["b1.html#trends", "اتجاهات حديثة"],
     ["b1.html#iot", "إنترنت الأشياء"],

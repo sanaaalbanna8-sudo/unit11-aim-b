@@ -535,29 +535,46 @@
       </section>
 
       <section class="slide" id="read-mac">
-        <p class="kicker">ب1 · اقرئي العنوان الفيزيائي</p>
-        <h2><bdi>MAC</bdi> ليس <bdi>IP</bdi>… والملصق يوضح الفرق</h2>
+        <p class="kicker">ب1 · نشاط ويندوز أمام الصف</p>
+        <h2>اعرضي على الجهاز: أين <bdi>MAC</bdi>؟ أين <bdi>IP</bdi>؟ أين البوابة؟</h2>
+        <p class="lead">نشاط قصير على ويندوز. أنتِ تشغّلينه على جهاز المعلمة أو جهاز مختبر ظاهر على الشاشة. الطالبات يشاهدن ثم يكررن إن سُمح لهن.</p>
         <div class="grid-2">
-          <figure class="figure">
-            <img src="images/label-mac-device.jpg" alt="ملصق جهاز يظهر عنوان MAC بشكل أزواج ست عشرية">
-            <figcaption>عنوان <bdi>MAC</bdi> يُكتب عادة أزواجًا ست عشرية مفصولة بشرطة أو نقطتين.</figcaption>
-          </figure>
+          <article class="lab">
+            <span class="tag">الطريقة الأساسية · موجه الأوامر</span>
+            <ol>
+              <li>اضغطي مفتاح <bdi>Windows</bdi>، اكتبي <bdi>cmd</bdi>، ثم Enter. تظهر نافذة سوداء: Command Prompt.</li>
+              <li>اكتبي بالضبط: <bdi>ipconfig /all</bdi> ثم Enter.</li>
+              <li>انزلي إلى المحول المتصل الآن:
+                <ul>
+                  <li>سلكي: غالبًا <bdi>Ethernet adapter</bdi></li>
+                  <li>واي فاي: غالبًا <bdi>Wireless LAN adapter Wi-Fi</bdi></li>
+                </ul>
+              </li>
+              <li>أشيري بالماوس واقرئي بصوت عالٍ ثلاثة أسطر فقط:
+                <ul>
+                  <li><bdi>Physical Address</bdi> ← هذا الـ <bdi>MAC</bdi> (شكل مثل 00-1A-2B-3C-4D-5E)</li>
+                  <li><bdi>IPv4 Address</bdi> ← هذا الـ <bdi>IP</bdi> (شكل مثل 192.168.1.24)</li>
+                  <li><bdi>Default Gateway</bdi> ← هذه البوابة = عنوان الـ <bdi>Router</bdi> داخل الشبكة (مثل 192.168.1.1)</li>
+                </ul>
+              </li>
+              <li>اسألي الصف: أي سطر يبقى إن غيّرنا الشبكة غدًا؟ الجواب المتوقع: <bdi>MAC</bdi> يبقى؛ <bdi>IP</bdi> والبوابة قد يتغيران.</li>
+            </ol>
+          </article>
           <div>
+            <figure class="figure">
+              <img src="images/label-mac-device.jpg" alt="مثال لشكل عنوان MAC بست خانات ست عشرية">
+              <figcaption><bdi>MAC</bdi> = أزواج ست عشرية. <bdi>IP</bdi> = أربع خانات عشرية. لا تخلطي الشكلين.</figcaption>
+            </figure>
             <article class="card">
-              <h3>كيف تميّزينه؟</h3>
-              <ul>
-                <li><bdi>MAC</bdi>: شكل مثل <bdi>00-50-56-C0-00-08</bdi> أو <bdi>AA:BB:CC:11:22:33</bdi> — حروف وأرقام ست عشرية، ستة أجزاء.</li>
-                <li><bdi>IP</bdi>: شكل مثل <bdi>192.168.1.24</bdi> — أربع خانات عشرية فقط.</li>
-                <li>في ويندوز: <bdi>ipconfig /all</bdi> يظهر السطر <bdi>Physical Address</bdi> = هذا هو الـ <bdi>MAC</bdi>.</li>
-              </ul>
+              <h3>إن كان cmd مقفولًا في الكلية</h3>
+              <ol>
+                <li>إعدادات ← شبكة وإنترنت ← Wi-Fi (أو Ethernet) ← خصائص الشبكة المتصلة.</li>
+                <li>ابحثي عن: عنوان IPv4، البوابة الافتراضية، العنوان الفعلي / Physical address.</li>
+              </ol>
             </article>
             <article class="think">
-              <span class="tag">لماذا يُطبع MAC على الجهاز؟</span>
-              <p>لأنه ثابت مع بطاقة الشبكة تقريبًا، فيساعد الجرد («أي لابتوب هذا؟») والفلاتر أحيانًا، ويفسّر سجلات الـ <bdi>Switch</bdi>. أما <bdi>IP</bdi> فقد يتغير كل يوم عبر DHCP، لذلك لا يعتمد الجرد عليه وحده.</p>
-            </article>
-            <article class="impact good">
-              <h3>نشاط صفّي دقيقة واحدة</h3>
-              <p>كل طالبة تنظر لملصق <bdi>Router</bdi> أو لهاتفها (تفاصيل الواي فاي) أو لـ <bdi>ipconfig /all</bdi>: أين <bdi>MAC</bdi>؟ أين <bdi>IP</bdi>؟ أين البوابة؟</p>
+              <span class="tag">جملة تختمين بها</span>
+              <p><bdi>MAC</bdi> بطاقة الجهاز. <bdi>IP</bdi> عنوانه اليوم على هذه الشبكة. البوابة باب الخروج نحو الشبكات الأخرى والإنترنت — وغالبًا هي الـ <bdi>Router</bdi>.</p>
             </article>
           </div>
         </div>
