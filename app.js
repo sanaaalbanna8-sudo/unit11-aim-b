@@ -22,7 +22,7 @@ const NAV = [
     ["b1.html#logical", "الإيثرنت و 802.11"],
     ["b1.html#read-router-label", "اقرئي ملصق الـ Router"],
     ["b1.html#read-switch-cable", "منافذ Switch والكيبل"],
-    ["b1.html#read-mac", "نشاط ويندوز: MAC و IP"],
+    ["b1.html#read-mac", "MAC و IP والبوابة"],
     ["b1.html#architecture", "بنى الشبكة الثلاث"],
     ["b1.html#trends", "اتجاهات حديثة"],
     ["b1.html#iot", "إنترنت الأشياء"],
@@ -55,7 +55,7 @@ const NAV = [
     ["b3.html#dhcp-routing", "DHCP والتوجيه"],
     ["b3.html#remote", "الوصول عن بُعد"],
     ["b3.html#file-web", "ملفات وطباعة وويب وبريد"],
-    ["b3.html#case", "دراسة كلية الأفق"],
+    ["b3.html#case", "دراسة جامعة الأفق"],
     ["b3.html#secure-existing", "تأمين نظام قائم"]
   ]},
   { title: "الحصة والمصطلحات", links: [
@@ -64,8 +64,8 @@ const NAV = [
     ["lab.html#lab-ping", "ping و tracert"],
     ["lab.html#lab-dns", "nslookup"],
     ["lab.html#lab-firewall", "الجدار والسجلات"],
-    ["lab.html#lab-phone", "هاتف الطالب"],
-    ["lab.html#lab-draw", "رسم الكلية"],
+    ["lab.html#lab-phone", "الهاتف"],
+    ["lab.html#lab-draw", "رسم الجامعة"],
     ["lab.html#lab-boundaries", "حدود العرض الآمن"],
     ["glossary.html#glossary", "المعجم والنطق"]
   ]}
@@ -90,7 +90,7 @@ function buildNav() {
       <a href="index.html">
         <div class="brand-k">UNIT 11 · AIM B</div>
         <strong>الأثر الأمني للأنظمة المتصلة</strong>
-        <span>الوحدة 11 · نتاج التعلم ب فقط</span>
+        <span>الوحدة 11 · الهدف ب</span>
         <span class="rights">© Sanaa Albanna · جميع الحقوق محفوظة · All rights reserved</span>
       </a>
     </div>
@@ -165,7 +165,7 @@ function wireBuilder() {
   const note = document.getElementById("builderNote");
   const notes = {
     server: "الـ Server يضع الحسابات والملفات في نقطة واحدة يمكن إدارتها. إن بقي على الشبكة نفسها مع أجهزة الطلاب بلا عزل، اقترب أي جهاز مصاب من بيانات الطلاب.",
-    wan: "رابط الإنترنت هو المدخل العام. الحزم تعبر الـ Router، وهنا يُقرر ما يدخل إلى الكلية وما يخرج منها.",
+    wan: "رابط الإنترنت هو المدخل العام. الحزم تعبر الـ Router، وهنا يُقرر ما يدخل إلى الجامعة وما يخرج منها.",
     wifi: "الـ Access Point تنشر الإشارة في الهواء. شبكة الضيوف تبقى مفصولة عن Server السجلات حتى لا يصبح هاتف الزائر طريقًا إلى الداخل."
   };
   builder.querySelectorAll("button[data-add]").forEach((btn) => {
