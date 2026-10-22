@@ -584,28 +584,65 @@
       <section class="slide" id="trends">
         <p class="kicker">ب1 · اتجاهات حديثة</p>
         <h2>التقنية الجديدة تقلل الصناديق وتكثّف القرارات</h2>
-<figure class="figure"><img src="images/virtual-servers.jpg" alt="خزانة واحدة، وداخلها عدة آلات افتراضية. العزل بينها قرار أمني لا مجرد توفير أجهزة."><figcaption>خزانة واحدة، وداخلها عدة آلات افتراضية. العزل بينها قرار أمني لا مجرد توفير أجهزة.</figcaption></figure>
+        <p class="lead">قبل التفاصيل: معنى كل اختصار بجملة واحدة، ثم أثره.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>الاختصار</th><th>بالإنجليزية كاملًا</th><th>معناه ببساطة</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><span class="t" data-en="VM" data-say="Virtual Machine"></span></td>
+                <td><bdi>Virtual Machine</bdi></td>
+                <td>حاسوب منطقي يعيش داخل <bdi>Server</bdi> حقيقي. نظام وتطبيق كأنهما على جهاز مستقل، وهما على صندوق واحد.</td>
+              </tr>
+              <tr>
+                <td><span class="t" data-en="SaaS" data-say="Software as a Service"></span></td>
+                <td><bdi>Software as a Service</bdi></td>
+                <td>البرنامج جاهز عند المزود وتفتحه من المتصفح (مستندات، بريد). أنت تستخدم؛ المزود يشغّل ويحدّث.</td>
+              </tr>
+              <tr>
+                <td><span class="t" data-en="PaaS" data-say="Platform as a Service"></span></td>
+                <td><bdi>Platform as a Service</bdi></td>
+                <td>المزود يعطي بيئة جاهزة للمطوّر: أدوات، قواعد بيانات، مساحة تشغيل. أنت تبني التطبيق؛ هو يوفّر المنصة.</td>
+              </tr>
+              <tr>
+                <td><span class="t" data-en="SDN" data-say="Software Defined Networking"></span></td>
+                <td><bdi>Software Defined Networking</bdi></td>
+                <td>سلوك الشبكة يُضبط من برنامج تحكم مركزي، لا من الدخول لكل <bdi>Switch</bdi> و <bdi>Router</bdi> يدويًا.</td>
+              </tr>
+              <tr>
+                <td><span class="t" data-en="SAN" data-say="Storage Area Network"></span></td>
+                <td><bdi>Storage Area Network</bdi></td>
+                <td>شبكة مخصّصة للتخزين السريع بين وحدات الـ <bdi>Server</bdi> والأقراص. قريبة من فكرة «شبكة معرفة بالتخزين».</td>
+              </tr>
+              <tr>
+                <td><span class="t" data-en="BYOD" data-say="Bring Your Own Device"></span></td>
+                <td><bdi>Bring Your Own Device</bdi></td>
+                <td>أحضر جهازك: الهاتف أو اللابتوب الشخصي يدخل شبكة العمل.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <div class="grid-2">
           <article class="card">
             <h3><span class="t" data-en="Virtualisation" data-say="Virtualisation">المحاكاة الافتراضية</span></h3>
-            <p><bdi>Server</bdi> قوي يشغّل عدة حواسيب افتراضية، لكل منها نظام وتطبيق. نوفر أجهزة ونوسّع أسهل ونعزل المهام: ويب في آلة، وقاعدة بيانات في أخرى. الخطر: إن انكسرت العزلة أو وقعت منصة الاستضافة، تشارك الجميع المصير. النسخ والحماية تكون لكل آلة لا للصندوق فقط.</p>
+            <p><bdi>Server</bdi> قوي يشغّل عدة <bdi>VM</bdi>. نوفر أجهزة، نوسّع أسرع، ونعزل المهام: ويب في آلة وقاعدة بيانات في أخرى. الخطر: إن انكسرت العزلة أو وقع الصندوق، تتأثر الآلات معًا. النسخ والحماية لكل <bdi>VM</bdi>، لا للصندوق فقط.</p>
           </article>
           <article class="card">
-            <h3>سحابة التطبيقات والمنصات</h3>
-            <p><span class="t" data-en="SaaS" data-say="Software as a Service">برمجيات كخدمة</span> مثل مستندات تعمل في المتصفح على <bdi>Server</bdi> المزود. <span class="t" data-en="PaaS" data-say="Platform as a Service">منصة كخدمة</span> تعطي المطوّر أدواتًا وقواعد وبيئة جاهزة. الأثر المتوازن: سرعة وتحديث عند المزود، وفقدان السيطرة المباشرة. بيانات المؤسسة أصبحت عند طرف آخر، فيلزم عقد واضح وصلاحيات ومكان تخزين مفهوم للإدارة.</p>
+            <h3><bdi>SaaS</bdi> و <bdi>PaaS</bdi></h3>
+            <p><bdi>SaaS</bdi>: تستخدم التطبيق جاهزًا. <bdi>PaaS</bdi>: تبني عليه تطبيقك. الاثنان يسرّعان العمل عند المزود، وينقلان البيانات خارج المبنى. يلزم عقد، وصلاحيات، ومعرفة أين تُخزَّن البيانات.</p>
           </article>
           <article class="card">
-            <h3><span class="t" data-en="SDN" data-say="Software Defined Networking">شبكات محددة بالبرمجيات</span></h3>
-            <p>بدل ضبط كل جهاز بيدوي، تُدار الشبكة من طبقة تحكم برمجية، بمرونة تشبه السحابة داخل المؤسسة. مفيدة للتغيير السريع. وحدة التحكم هدف ثمين: من يغيرها يغيّر سلوك الشبكة كلها، فتُحصر صلاحية التعديل وتُسجَّل.</p>
+            <h3><bdi>SDN</bdi></h3>
+            <p>مرونة سريعة لتغيير قواعد الشبكة من مكان واحد. وحدة التحكم هدف ثمين: من يعدّلها يعدّل سلوك الشبكة كلها، فتُحصر الصلاحية وتُسجَّل التعديلات.</p>
           </article>
           <article class="card">
-            <h3><span class="t" data-en="Storage-defined network" data-say="Storage defined network">شبكة معرفة بالتخزين</span></h3>
-            <p>أجهزة التخزين تُوصل بالشبكة لتكون متاحة لمن يحتاج الكميات الكبيرة، لا حبيسة <bdi>Server</bdi> واحد. قريبة في الفكرة من SAN. الفائدة وصول أسهل للبيانات الضخمة. الشرط أن «متاحة على الشبكة» لا تعني متاحة لكل حساب.</p>
+            <h3>شبكة معرفة بالتخزين ≈ فكرة <bdi>SAN</bdi></h3>
+            <p>التخزين على الشبكة لمن يحتاج كميات كبيرة، لا حبيس <bdi>Server</bdi> واحد. «متاح على الشبكة» لا تعني متاحًا لكل حساب — الصلاحيات تبقى.</p>
           </article>
         </div>
         <article class="impact risk">
-          <h3>BYOD بميزان المؤسسة</h3>
-          <p>الهاتف الشخصي يريح الموظف ويوفّر جهازًا، ويصعب على الجامعة أن تفرض عليه التحديث وقفل الشاشة وفصل البريد عن التطبيقات الخاصة. جهاز مفقود فيه بريد العمل يعني رسائل الجامعة في يد من وجد الهاتف. الحل المتوازن: شبكة منفصلة أو إدارة محدودة للجهاز، لا منع أعمى ولا ثقة عمياء.</p>
+          <h3><bdi>BYOD</bdi></h3>
+          <p>الجهاز الشخصي يريح ويوفّر ثمن جهاز عمل، ويصعّب فرض التحديث وقفل الشاشة وفصل بريد العمل عن التطبيقات الخاصة. جهاز مفقود فيه بريد العمل = رسائل الجامعة مع من وجده. الحل: شبكة منفصلة أو إدارة محدودة للجهاز، لا منع أعمى ولا ثقة عمياء.</p>
         </article>
       </section>
 
