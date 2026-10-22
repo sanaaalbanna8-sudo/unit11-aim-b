@@ -20,6 +20,9 @@ const NAV = [
     ["b1.html#star", "النجمي والموسّع"],
     ["b1.html#hierarchical", "الهرمي والمتشابك والمخصص"],
     ["b1.html#logical", "الإيثرنت و 802.11"],
+    ["b1.html#read-router-label", "اقرئي ملصق الـ Router"],
+    ["b1.html#read-switch-cable", "منافذ Switch والكيبل"],
+    ["b1.html#read-mac", "MAC مقابل IP"],
     ["b1.html#architecture", "نظير وخادم وعميل رقيق"],
     ["b1.html#trends", "اتجاهات حديثة"],
     ["b1.html#iot", "إنترنت الأشياء"],
@@ -239,12 +242,12 @@ function bootDeck() {
   const offsets = {
     "index.html": 0,
     "b1.html": 2,
-    "b2.html": 20,
-    "b3.html": 30,
-    "lab.html": 46,
-    "glossary.html": 54
+    "b2.html": 23,
+    "b3.html": 33,
+    "lab.html": 49,
+    "glossary.html": 57
   };
-  const total = 55;
+  const total = 58;
   const offset = offsets[here] || 0;
   let index = 0;
   if (location.hash === "#end") index = slides.length - 1;
