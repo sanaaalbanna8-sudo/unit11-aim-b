@@ -561,23 +561,24 @@
 
       <section class="slide" id="architecture">
         <p class="kicker">ب1 · Network architecture</p>
-        <h2>بنى الشبكة الثلاث: من يدير الحساب والملفات؟</h2>
-        <p class="lead">هذا التصنيف اسمه <span class="t" data-en="Network architecture" data-say="Network architecture">بنية الشبكة</span>: كيف تُنظَّم الحسابات والموارد — لا شكل الكيبل. ثلاثة نماذج شائعة.</p>
-        <div class="grid-3">
+        <h2>بنية الشبكة: الحسابات… والجهاز الذي يجلس عليه المستخدم</h2>
+        <p class="lead"><span class="t" data-en="Network architecture" data-say="Network architecture">بنية الشبكة</span> تجمع أمرين يُدرَّسان معًا: كيف تُدار الحسابات والملفات، وأي نوع جهاز يناسب ذلك. ليست كلها «أنواع حسابات».</p>
+        <div class="grid-2">
           <article class="card">
+            <span class="tag">كيف تُدار الحسابات والملفات؟</span>
             <h3><span class="t" data-en="Peer to peer" data-say="Peer to peer">نظير إلى نظير</span></h3>
-            <p>بلا <bdi>Server</bdi> مركزي. كل مستخدم يدخل إلى جهازه ويشارك مجلدًا أو طابعة. تناسب بيتًا أو مكتبًا صغيرًا. سهلة ورخيصة. حين يكبر العدد تصبح الإدارة كابوسًا: التحديث وكلمة المرور على كل جهاز وحدهما، والدخول ممكن فقط حيث يوجد حساب.</p>
+            <p>بلا <bdi>Server</bdi> مركزي. كل مستخدم يدخل إلى جهازه ويشارك مجلدًا أو طابعة. تناسب بيتًا أو مكتبًا صغيرًا. سهلة ورخيصة. حين يكبر العدد تصبح الإدارة كابوسًا: التحديث وكلمة المرور على كل جهاز وحدهما.</p>
+            <h3 style="margin-top:14px"><span class="t" data-en="Client/server" data-say="Client server">عميل / Server</span></h3>
+            <p>حساب واحد على الشبكة، فيدخل صاحبه من أي جهاز مسموح. التحديث والصلاحيات والنسخ من الـ <bdi>Server</bdi>. هذا ما تحتاجه جامعة. سقوط الـ <bdi>Server</bdi> أو سرقة حساب المدير أثره واسع، فيُحمى ويُنسخ.</p>
           </article>
           <article class="card">
-            <h3><span class="t" data-en="Client/server" data-say="Client server">عميل / Server</span></h3>
-            <p>حساب واحد على الشبكة، فيدخل صاحبه من أي جهاز مسموح. التحديث والصلاحيات والنسخ تُدار من الـ <bdi>Server</bdi>. هذا ما تحتاجه جامعة. مركز القوة يعني أيضًا أن سقوط الـ <bdi>Server</bdi> أو سرقة حساب المدير أثره واسع، فيُحمى ويُنسخ.</p>
-          </article>
-          <article class="card">
+            <span class="tag">ما نوع الجهاز على المكتب؟</span>
             <h3><span class="t" data-en="Thin client" data-say="Thin client">عميل رقيق</span></h3>
-            <p><strong>هذا جهاز، لا حساب.</strong> حاسوب بمواصفات ضعيفة رخيص: الشاشة ولوحة المفاتيح موجودة، أما البرامج والملفات فتعمل غالبًا عبر الشبكة أو السحابة. مثاله <span class="t" data-en="Chromebook" data-say="Chromebook">Chromebook</span>. سرقته تؤذي أقل إن لم يُحفظ عليه شيء محليًا. تعطله الحقيقي: انقطاع الشبكة، أو سرقة <em>الحساب</em> السحابي الذي يدخل منه الجهاز.</p>
+            <p><strong>جهاز، ليس نموذج حسابات.</strong> حاسوب رخيص بمواصفات ضعيفة؛ البرامج والملفات تعمل عبر الشبكة أو السحابة. مثاله <span class="t" data-en="Chromebook" data-say="Chromebook">Chromebook</span>.</p>
+            <p>يُذكر مع البنيتين لأنّه غالبًا يعمل فوق نموذج عميل/<bdi>Server</bdi> أو سحابة: الجهاز خفيف، والحساب والملفات في الوسط. سرقته تؤذي أقل إن لم يُحفظ عليه شيء. تعطله الحقيقي: انقطاع الشبكة أو سرقة الحساب السحابي.</p>
           </article>
         </div>
-        <div class="think"><span class="tag">مقارنة سريعة</span><p>نظير إلى نظير وعميل/<bdi>Server</bdi>: يصفان <strong>كيف تُدار الحسابات والملفات</strong>. العميل الرقيق يصف <strong>نوع الجهاز</strong> الذي يجلس عليه المستخدم. بيت صغير: نظير إلى نظير. جامعة كبيرة: عميل و <bdi>Server</bdi>. صف يعتمد دفترًا سحابيًا: جهاز رقيق يكفي إن بقيت الهوية والنسخ تحت الإدارة.</p></div>
+        <div class="think"><span class="tag">جملة واحدة للصف</span><p>نظير / عميل-<bdi>Server</bdi> = أين الحساب؟ · عميل رقيق = أي جهاز يفتح ذلك الحساب؟</p></div>
       </section>
 
       <section class="slide" id="trends">
